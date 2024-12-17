@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Spinner } from "./spinner";
-import "./styles.css";
+import css from "./button-spinner.module.css";
 
 const buttonCopy = {
   idle: "Send me a login link",
@@ -16,9 +16,9 @@ export default function SmoothButton() {
     useState<keyof typeof buttonCopy>("idle");
 
   return (
-    <div className="outer-wrapper">
+    <div className={css["outer-wrapper"]}>
       <button
-        className="blue-button"
+        className={css["blue-button"]}
         disabled={buttonState !== "idle"}
         onClick={() => {
           // This code is just a placeholder

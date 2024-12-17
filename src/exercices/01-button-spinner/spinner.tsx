@@ -1,4 +1,4 @@
-import "./styles.css"
+import css from "./button-spinner.module.css"
 import { CSSProperties } from "react";
 
 const bars = Array(12).fill(0);
@@ -12,15 +12,15 @@ export function Spinner({
 }) {
   return (
     <div
-      className="wrapper"
+      className={css["wrapper"]}
       style={{
         ["--spinner-size"]: `${size}px`,
         ["--spinner-color"]: color,
       } as CSSProperties}
     >
-      <div className="spinner">
+      <div className={css["spinner"]}>
         {bars.map((_, i) => (
-          <div className="bar" key={`spinner-bar-${i}`} />
+          <div className={css["bar"]} key={`spinner-bar-${i}`} />
         ))}
       </div>
     </div>

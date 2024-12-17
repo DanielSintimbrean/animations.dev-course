@@ -1,6 +1,6 @@
-import "./styles.css";
+import css from "./animate-height.module.css";
 import { motion } from "motion/react";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import useMeasure from "react-use-measure";
 
 export default function Example() {
@@ -9,18 +9,18 @@ export default function Example() {
   const [ref, bounds] = useMeasure();
 
   return (
-    <div className="wrapper">
+    <div className={css["wrapper"]}>
       <button
         style={{
           color: "black",
         }}
-        className="button"
+        className={css["button"]}
         onClick={() => setShowExtraContent((b) => !b)}
       >
         Toggle height
       </button>
-      <motion.div animate={{ height: bounds.height }} className="element">
-        <div ref={ref} className="inner">
+      <motion.div animate={{ height: bounds.height }} className={css["element"]}>
+        <div ref={ref} className={css["inner"]}>
           <h1>Fake Family Drawer</h1>
           <p>
             This is a fake family drawer. Animating height is tricky, but
