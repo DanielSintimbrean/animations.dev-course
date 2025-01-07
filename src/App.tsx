@@ -1,14 +1,15 @@
 import { useState } from "react";
-import Exercise1 from "./exercices/01-button-spinner/index";
-import Exercise2 from "./exercices/02-animate-height/index";
-import Exercise3 from "./exercices/03-layout-animation/index";
-import Exercise4 from "./exercices/04-game-list/index";
+import Exercise1 from "./exercices/01-button-spinner";
+import Exercise2 from "./exercices/02-animate-height";
+import Exercise3 from "./exercices/03-layout-animation";
+import Exercise4 from "./exercices/04-game-list";
+import Exercise5 from "./exercices/05-feedback-popover"
 
 export default function Example() {
   const [selected, setSelected] = useState("");
 
   return (
-    <div className="">
+    <div>
       <div>
         <label htmlFor="pet-select">Choose a exercices:</label>
 
@@ -23,12 +24,14 @@ export default function Example() {
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
+          <option value="5">5</option>
         </select>
       </div>
-      {selected === "1" && <Exercise1/>}
-      {selected === "2" && <Exercise2/>}
-      {selected === "3" && <Exercise3/>}
-      {selected === "4" && <Exercise4/>}
+      {selected === "1" && <Exercise1 />}
+      {selected === "2" && <Exercise2 />}
+      {selected === "3" && <Exercise3 />}
+      {selected === "4" && <Exercise4 />}
+      {selected === "5" && <Exercise5 />}
     </div>
   );
 }
